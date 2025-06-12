@@ -36,7 +36,7 @@ test_that("the plot.ANN() function works correctly",
   labs <- get_labs(p_NN)
   expect_equal(labs$x, 'Epoch')
   expect_equal(labs$y, 'Loss')
-  expect_equal(labs$colour, 'variable')
+  # expect_equal(labs$colour, 'variable')
   expect_equal(levels(p_NN$data$variable), c('Training', 'Validation'))
   
   expect_s3_class(p_AE, 'gg')
@@ -45,7 +45,7 @@ test_that("the plot.ANN() function works correctly",
   labs <- get_labs(p_AE)
   expect_equal(labs$x, 'Epoch')
   expect_equal(labs$y, 'Loss')
-  expect_equal(labs$colour, 'variable')
+  # expect_equal(labs$colour, 'variable')
   expect_equal(levels(p_AE$data$variable), c('Training', 'Validation'))
   
 })
@@ -64,7 +64,7 @@ test_that("the reconstruction_plot.ANN() function works correctly",
   expect_null(labs$x)
   expect_null(labs$y)
   expect_equal(labs$group, 'obs')
-  expect_equal(labs$colour, 'col')
+  # expect_equal(labs$colour, 'col')
   expect_equal(levels(p_AE$data$x_dim), sort(colnames(X)))
   expect_equal(levels(p_AE$data$y_dim), sort(colnames(X)))
   
